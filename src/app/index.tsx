@@ -1,9 +1,9 @@
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 
 export default function App() {
   return (
     <View>
-      <Text>App</Text>
+      <Image source={require("@/src/assets/imagens/logo.png")} alt="Logo Bora rachar" style={{ width: 200, height: 80 }} />
     </View>
   )
 }
