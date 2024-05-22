@@ -3,7 +3,7 @@ import { styles } from './styles'
 import { theme } from '@/src/theme'
 
 type ButtonType = {
-  type: 'dark' | 'light' | 'transparent' | 'link'
+  type?: 'dark' | 'light' | 'transparent' | 'link'
   children: string
 }
 

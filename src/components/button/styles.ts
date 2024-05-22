@@ -20,6 +20,9 @@ export const styles = StyleSheet.create({
   light: {
     backgroundColor: theme.colors.secondary,
   },
+  link: {
+    backgroundColor: theme.colors.white,
+  },
   transparent: {
     borderWidth: 1,
     borderColor: theme.colors.primary,
