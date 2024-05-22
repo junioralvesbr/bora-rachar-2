@@ -1,14 +1,19 @@
-import { Image, Text, View } from 'react-native'
+import { Image, Pressable, Text, View } from 'react-native'
+import { router } from 'expo-router'
+import Button from '@/src/components/button'
 
 import { styles } from './styles'
-import Button from '@/src/components/button'
-import { router } from 'expo-router'
 
 export default function Onboarding1() {
   return (
     <View style={{ flex: 1, justifyContent: 'space-between' }}>
-      <View style={{ width: '100%', height: 72 }}>
-        <Text>Back</Text>
+      <View style={{ width: '100%', height: 72, justifyContent: 'center' }}>
+        <Pressable onPress={() => router.back()}>
+          <Image
+            source={require('@/src/assets/imagens/back-arrow.png')}
+            alt="Botão de voltar"
+          />
+        </Pressable>
       </View>
 
       <View>
