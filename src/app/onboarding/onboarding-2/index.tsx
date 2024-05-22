@@ -14,28 +14,28 @@ export default function Onboarding1() {
       <View>
         <View>
           <Image
-            source={require('@/src/assets/imagens/onboarding-1.png')}
+            source={require('@/src/assets/imagens/onboarding-2.png')}
             alt="Onboarding"
             style={{ width: 300, height: 300, alignSelf: 'center' }}
           />
         </View>
 
         <Text style={[styles.title, { marginTop: 24 }]}>
-          Rápido, fácil e seguro
+          Calcule quanto cada um deverá pagar
         </Text>
 
         <Text style={[styles.text, { marginTop: 8 }]}>
-          Dividir as contas é moleza! Basta adicionar as pessoas, escolher o
-          valor e pronto! O aplicativo faz o resto.
+          Use a nossa calculadora de divisões para despesas rápidas como uma
+          conta de restaurante.
         </Text>
       </View>
 
       <View style={{ paddingVertical: 48 }}>
         <Button
           type="dark"
-          onPress={() => router.push('/onboarding/onboarding-2/')}
+          onPress={() => router.push('/onboarding/onboarding-3/')}
         >
-          Como Funciona
+          E para gastos mais complexos?
         </Button>
         <Button type="link">Pular</Button>
       </View>
