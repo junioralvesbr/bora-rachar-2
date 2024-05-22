@@ -1,33 +1,17 @@
-import { Image, Pressable, Text, View } from 'react-native'
+import { Dimensions, Image, Text, View } from 'react-native'
 import { router } from 'expo-router'
+
 import Button from '@/src/components/button'
 
-import { styles } from './styles'
-import AsyncStorage from '@react-native-async-storage/async-storage'
+import { styles } from '../styles'
 
 export default function Onboarding1() {
-  const handleJump = async () => {
-    try {
-      await AsyncStorage.setItem('firstTimeToAccess', 'true')
-    } catch (error) {
-      console.log(error)
-    }
-
-    router.push('/onboarding/onboarding-2/')
-  }
+  const windowHeight = Dimensions.get('window').height
+  const adaptativePaddingTopScreen = Number((windowHeight * 0.2).toFixed(0))
 
   return (
     <View style={{ flex: 1, justifyContent: 'space-between' }}>
-      <View style={{ width: '100%', height: 72, justifyContent: 'center' }}>
-        <Pressable onPress={() => router.back()}>
-          <Image
-            source={require('@/src/assets/imagens/back-arrow.png')}
-            alt="Botão de voltar"
-          />
-        </Pressable>
-      </View>
-
-      <View>
+      <View style={{ paddingTop: adaptativePaddingTopScreen }}>
         <View>
           <Image
             source={require('@/src/assets/imagens/onboarding-1.png')}
@@ -53,7 +37,8 @@ export default function Onboarding1() {
         >
           Como Funciona
         </Button>
-        <Button type="link" onPress={handleJump}>
+
+        <Button type="link" onPress={() => router.replace('/')}>
           Pular
         </Button>
       </View>

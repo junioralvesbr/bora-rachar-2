@@ -4,6 +4,7 @@ import { theme } from '@/src/theme'
 
 type ButtonType = {
   type?: 'dark' | 'light' | 'transparent' | 'link'
+  onPress?: () => void
   children: string
 }
 

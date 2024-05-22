@@ -2,7 +2,7 @@ import { Image, Pressable, Text, View } from 'react-native'
 import { router } from 'expo-router'
 import Button from '@/src/components/button'
 
-import { styles } from './styles'
+import { styles } from '../styles'
 
 export default function Onboarding1() {
   return (

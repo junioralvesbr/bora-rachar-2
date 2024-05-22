@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '700',
     color: theme.colors.gray600,
+    lineHeight: 32,
   },
   text: {
     fontFamily: theme.fontFamily.regular,
