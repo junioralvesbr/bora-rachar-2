@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   text: {
     fontFamily: theme.fontFamily.semiBold,
     fontWeight: '600',
-    color: theme.colors.white,
+    color: theme.colors.third,
     fontSize: 16,
   },
   dark: {

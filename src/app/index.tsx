@@ -1,6 +1,7 @@
 import { Dimensions, Image, Text, View } from 'react-native'
 import Button from '@/src/components/button'
 import { styles } from './styles'
+import { router } from 'expo-router'
 
 export default function App() {
   const windowHeight = Dimensions.get('window').height
@@ -27,7 +28,9 @@ export default function App() {
 
         <View style={{ gap: 16 }}>
           <Button type="light">Fazer Login</Button>
-          <Button type="transparent">Usar Calculadora</Button>
+          <Button type="transparent" onPress={() => router.push('/onboarding')}>
+            Usar Calculadora
+          </Button>
         </View>
       </View>
     </View>
