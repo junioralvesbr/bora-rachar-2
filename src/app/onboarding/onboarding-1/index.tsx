@@ -25,8 +25,8 @@ export default function Onboarding1() {
         </Text>
 
         <Text style={[styles.text, { marginTop: 8 }]}>
-          Dividir as contas é moleza! Basta adicionar as pessoas, escolher o
-          valor e pronto! O aplicativo faz o resto.
+          Dividir as contas é moleza! {'\n'}Basta adicionar as pessoas, escolher
+          o valor {'\n'}e pronto! O aplicativo faz o resto.
         </Text>
       </View>
 

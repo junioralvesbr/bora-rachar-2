@@ -27,12 +27,13 @@ export default function Onboarding1() {
         </View>
 
         <Text style={[styles.title, { marginTop: 24 }]}>
-          Crie grupos, adicione amigos e escolha o jeito que prefere dividir
+          Crie grupos, adicione amigos {'\n'}e escolha o jeito que prefere
+          dividir
         </Text>
 
         <Text style={[styles.text, { marginTop: 8 }]}>
-          Criando uma conta, você terá acesso a mais funcionalidades como
-          grupos, histórico e novas modalidades de divisão.
+          Criando uma conta, você terá acesso a {'\n'}mais funcionalidades como
+          grupos, {'\n'}histórico e novas modalidades de divisão.
         </Text>
       </View>
 

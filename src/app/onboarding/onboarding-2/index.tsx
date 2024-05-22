@@ -26,7 +26,7 @@ export default function Onboarding1() {
         </View>
 
         <Text style={[styles.title, { marginTop: 24 }]}>
-          Calcule quanto cada um deverá pagar
+          Calcule quanto cada um {'\n'}deverá pagar
         </Text>
 
         <Text style={[styles.text, { marginTop: 8 }]}>
@@ -42,7 +42,9 @@ export default function Onboarding1() {
         >
           E para gastos mais complexos?
         </Button>
-        <Button type="link">Pular</Button>
+        <Button type="link" onPress={() => router.replace('/')}>
+          Pular
+        </Button>
       </View>
     </View>
   )
