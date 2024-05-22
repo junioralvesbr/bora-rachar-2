@@ -2,10 +2,29 @@ import { Dimensions, Image, Text, View } from 'react-native'
 import Button from '@/src/components/button'
 import { styles } from './styles'
 import { router } from 'expo-router'
+import { useEffect } from 'react'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default function App() {
   const windowHeight = Dimensions.get('window').height
   const adaptativePaddingTopScreen = Number((windowHeight * 0.2).toFixed(0))
+
+  async function getFirstTimeToAccessWithinAsyncStorage() {
+    return await AsyncStorage.getItem('firstTimeToAccess')
+  }
+
+  useEffect(() => {
+    async function checkFirstTimeToAccess() {
+      const value = await getFirstTimeToAccessWithinAsyncStorage()
+      console.log(value)
+
+      if (value === null) {
+        router.replace('/onboarding/')
+      }
+    }
+
+    checkFirstTimeToAccess()
+  }, [])
 
   return (
     <View

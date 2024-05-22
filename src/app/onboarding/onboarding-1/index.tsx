@@ -3,8 +3,19 @@ import { router } from 'expo-router'
 import Button from '@/src/components/button'
 
 import { styles } from './styles'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default function Onboarding1() {
+  const handleJump = async () => {
+    try {
+      await AsyncStorage.setItem('firstTimeToAccess', 'true')
+    } catch (error) {
+      console.log(error)
+    }
+
+    router.push('/onboarding/onboarding-2/')
+  }
+
   return (
     <View style={{ flex: 1, justifyContent: 'space-between' }}>
       <View style={{ width: '100%', height: 72, justifyContent: 'center' }}>
@@ -42,7 +53,9 @@ export default function Onboarding1() {
         >
           Como Funciona
         </Button>
-        <Button type="link">Pular</Button>
+        <Button type="link" onPress={handleJump}>
+          Pular
+        </Button>
       </View>
     </View>
   )
