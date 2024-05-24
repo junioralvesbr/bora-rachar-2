@@ -17,7 +17,7 @@ export default function App() {
       const value = await AsyncStorage.getItem('firstTimeToAccess')
 
       if (value === null) {
-        router.replace('/onboarding/')
+        router.replace('/onboarding/onboarding-1')
       }
 
       setShowOnboarding(true)
@@ -57,7 +57,7 @@ export default function App() {
               </Button>
               <Button
                 type="transparent"
-                onPress={() => router.push('/onboarding')}
+                onPress={() => router.push('/onboarding/onboarding-1')}
               >
                 Usar Calculadora
               </Button>
