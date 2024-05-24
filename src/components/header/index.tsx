@@ -3,7 +3,11 @@ import { router } from 'expo-router'
 
 import { styles } from './styles'
 
-export default function Header() {
+type HeaderProps = {
+  children: string
+}
+
+export default function Header({ children }: HeaderProps) {
   return (
     <View style={styles.container}>
       <View style={{ flex: 1, alignItems: 'flex-start' }}>
@@ -15,7 +19,7 @@ export default function Header() {
         </Pressable>
       </View>
 
-      <Text style={styles.title}>Login</Text>
+      <Text style={styles.title}>{children}</Text>
 
       <View style={{ flex: 1, alignItems: 'flex-end' }}>
         <Pressable onPress={() => router.back()}>
