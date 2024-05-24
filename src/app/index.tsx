@@ -15,6 +15,7 @@ export default function App() {
   useEffect(() => {
     async function checkFirstTimeToAccess() {
       const value = await AsyncStorage.getItem('firstTimeToAccess')
+      console.log(await AsyncStorage.getAllKeys())
 
       if (value === null) {
         router.replace('/onboarding/onboarding-1')
@@ -52,7 +53,7 @@ export default function App() {
             </View>
 
             <View style={{ gap: 16 }}>
-              <Button type="light" onPress={() => remove()}>
+              <Button type="light" onPress={() => router.push('/login')}>
                 Fazer Login
               </Button>
               <Button
