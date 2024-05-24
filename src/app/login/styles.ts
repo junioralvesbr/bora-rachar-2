@@ -46,5 +46,6 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 20,
     color: theme.colors.gray600,
+    textDecorationLine: 'underline',
   },
 })

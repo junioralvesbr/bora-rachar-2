@@ -35,33 +35,14 @@ export default function Login() {
             <TextInput style={styles.input} placeholder="joão@gmail.com" />
           </View>
 
-          <Link
-            href="/"
-            style={[
-              styles.link,
-              { textDecorationLine: 'underline', marginTop: 8 },
-            ]}
-          >
+          <Link href="/" style={[styles.link, { marginTop: 8 }]}>
             Esqueceu sua senha?
           </Link>
         </View>
 
-        <View style={{ marginBottom: 20 }}>
+        <View style={{ marginBottom: 40, gap: 16 }}>
           <Button type="dark">Login</Button>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginTop: 16,
-              gap: 2,
-            }}
-          >
-            <Text style={styles.description}>Ainda não possui uma conta?</Text>
-            <Link href="/create-user" style={styles.link}>
-              Crie agora
-            </Link>
-          </View>
+          <Button type="transparent">Criar Conta</Button>
         </View>
       </KeyboardAvoidingView>
     </View>
