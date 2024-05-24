@@ -20,7 +20,6 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     color: theme.colors.gray600,
     lineHeight: 24,
-    marginTop: 8,
   },
   label: {
     fontFamily: theme.fontFamily.medium,
@@ -40,5 +39,12 @@ export const styles = StyleSheet.create({
     borderRadius: 8,
     paddingVertical: 12,
     paddingHorizontal: 16,
+  },
+  link: {
+    fontFamily: theme.fontFamily.bold,
+    fontWeight: '700',
+    fontSize: 14,
+    lineHeight: 20,
+    color: theme.colors.gray600,
   },
 })
