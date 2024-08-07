@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { Stack } from 'expo-router'
+import { Slot } from 'expo-router'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import * as SplashScreen from 'expo-splash-screen'
 import {
   Inter_400Regular as InterRegular,
@@ -8,6 +9,7 @@ import {
   Inter_700Bold as InterBold,
   useFonts,
 } from '@expo-google-fonts/inter'
+import { View } from 'react-native'
 
 SplashScreen.preventAutoHideAsync()
 
@@ -28,8 +30,8 @@ export default function RootLayout() {
   if (!fontsLoaded && !error) return null
 
   return (
-    <Stack>
-      <Stack.Screen name="index" />
-    </Stack>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Slot />
+    </SafeAreaView>
   )
 }
